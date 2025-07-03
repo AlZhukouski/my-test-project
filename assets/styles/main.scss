@@ -1,0 +1,9 @@
+//Plugins
+@use 'normalize.css/normalize' as *;
+
+//scss
+@use 'fonts';
+@use 'global';
+
+//Components
+@use 'components/header';
