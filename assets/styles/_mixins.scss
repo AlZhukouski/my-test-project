@@ -1,17 +1,17 @@
 @use "variables" as *;
 
 @mixin container {
-    max-width: calc(1172px + #{2 * $container-padding});
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $container-padding;
-    padding-right: $container-padding;
-    box-sizing: border-box;
+  max-width: calc(1172px + #{2 * $container-padding});
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  box-sizing: border-box;
 }
 
 @mixin font-smoothing {
-   -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-synthesis: none;

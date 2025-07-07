@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="ru">
+<!-- ифывфывфвывыф -->
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="header__container">
       <a href="/" class="header__logo">
@@ -32,23 +31,19 @@
       </nav>
     </div>
   </header>
-
-  <section hidden class="banner">
+  <section class="banner">
     <picture>
-      <!-- Мобильные (до 768px) -->
       <source media="(max-width: 767px)" srcset="
-        /assets/images/banner-mobile-1x.jpg 1x,
-        /assets/images/banner-mobile-2x.jpg 2x
-      " type="image/jpeg">
-      <!-- Планшеты (768-1199px) -->
-      <source media="(max-width: 1199px)" srcset="
-        /assets/images/banner-tablet-1x.jpg 1x,
-        /assets/images/banner-tablet-2x.jpg 2x
-      " type="image/jpeg">
-      <!-- Десктоп (1200px+) -->
-      <img src="/assets/images/banner.webp" srcset="/assets/images/banner.webp2x 2x" alt="Описание баннера"
-        class="banner__background-image" width="1920" height="850" alt="Banner image">
+        /assets/images/banner-mobile-1x.webp 1x,
+        /assets/images/banner-mobile-2x.webp 2x
+      " type="image/webp">
+      <source media="(max-width: 992px)" srcset="
+        /assets/images/banner-lg.webp 1x,
+        /assets/images/banner-lg-2x.webp 2x" type="image/webp">
+      <img src="/assets/images/banner.webp" srcset="/assets/images/banner.webp 1x, /assets/images/banner2x.webp 2x"
+        alt="Описание баннера" class="banner__background-image" width="1920" height="850" alt="Banner image">
     </picture>
+    <div class="banner__overlay"></div>
     <div class="banner__container">
       <h1 class="banner__title"><span class="highlight highlight--blue">Lorem ipsum </span> dolor sit
         ametconsectetur <span class="highlight highlight--blue">adipiscing</span></h1>
@@ -66,8 +61,7 @@
       </div>
     </div>
   </section>
-
-  <section hidden class="order">
+  <section class="order">
     <img src="/assets/images/worldMap.webp" class="order__background-image" width="1920" height="1000" alt="World map">
 
     <div class="order__container">
@@ -113,7 +107,7 @@
 
       <form class="form" action="#" method="POST">
         <div class="form__grid">
-          <div class="form__field form__field--one-thirds">
+          <div class="form__field form__field--one-third">
             <div class="form__input-wrap">
               <label id="selectLabel" for="select"><span hidden>Выберите тип системы</span></label>
               <select class="form__input" name="select" id="select">
@@ -173,8 +167,7 @@
       </form>
     </div>
   </section>
-
-  <footer hidden class="footer">
+  <footer class="footer">
     <div class="footer__container">
       <p class="footer__copyright">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
 

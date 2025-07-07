@@ -18,6 +18,12 @@
     box-sizing: border-box;
     min-height: 43px;
 
+    @media (max-width: $xl) {
+        min-width: 133px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
 
     &:hover,
     &:active {

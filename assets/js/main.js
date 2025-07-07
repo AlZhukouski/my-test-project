@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.toggle('menu-open');
   });
 
-  // Закрытие меню при клике на ссылку
   document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       burger.setAttribute('aria-expanded', 'false');

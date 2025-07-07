@@ -8,6 +8,14 @@
     position: relative;
     box-sizing: border-box;
 
+    @media (max-width: $lg) {
+        padding: 80px 0 80px;
+    }
+
+    @media (max-width: $sm) {
+        padding: 60px 0 60px;
+    }
+
     &__background-image {
         position: absolute;
         top: 0;
@@ -27,6 +35,10 @@
 
     &__title-wrap {
         margin-bottom: 80px;
+
+        @media (max-width: $lg) {
+            margin-bottom: 45px;
+        }
     }
 
     &__title {
@@ -38,6 +50,19 @@
         margin-bottom: 36px;
         color: $white;
         text-align: center;
+
+        @media (max-width: $lg) {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: $sm) {
+            font-size: 27px;
+        }
+
+        @media (max-width: $xs) {
+            font-size: 24px;
+        }
     }
 
     &__subtitle {
@@ -53,6 +78,12 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        margin-bottom: 60px;
+        margin-bottom: 90px;
+
+        @media (max-width: 970px) {
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+        }
     }
 }

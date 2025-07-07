@@ -34,7 +34,7 @@
         transform: translateX(0);
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: $lg) {
         position: fixed;
         top: 80px;
         left: 0;
@@ -51,6 +51,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin-bottom: 49px;
 
         &__list {
             flex-direction: column;

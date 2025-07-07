@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     width: 209px;
 
     &__icon-box {
@@ -18,9 +18,8 @@
         height: 100px;
         box-sizing: border-box;
         background-color: $flaxFlowerBlue;
-        border: 2px solid $starryNight;
+        border: 5px solid $starryNight;
         border-radius: 50%;
-        margin-bottom: 25px;
     }
 
     &__text {
@@ -49,7 +48,14 @@
         background-size: 111px 6px;
         background-repeat: repeat-x;
 
-        @media (max-width: 768px) {
+        @media (max-width: $lg) {
+            width: 80px;
+            background: radial-gradient(circle at 3px 3px, #C4C4C4 3px, transparent 3px),
+             radial-gradient(circle at 29px 3px, #C4C4C4 3px, transparent 3px),
+              radial-gradient(circle at 55px 3px, #C4C4C4 3px, transparent 3px);
+        }
+
+        @media (max-width: 970px) {
             display: none;
         }
     }

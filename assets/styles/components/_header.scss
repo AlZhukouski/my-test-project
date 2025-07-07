@@ -17,17 +17,29 @@
     box-sizing: border-box;
     min-height: 100px;
 
+    @media (max-width: $lg) {
+        min-height: 80px;
+    }
+
     &__container {
         @include container;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    &__logo-img {
+        @media (max-width: $lg) {
+            width: 200px;
+            height: auto;
+        }
+    }
+
     &__burger {
         display: none;
 
-        @media (max-width: 992px) {
+        @media (max-width: $lg) {
             display: flex;
             flex-direction: column;
             justify-content: center;
