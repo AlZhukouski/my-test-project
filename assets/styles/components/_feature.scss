@@ -1,0 +1,56 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.feature {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 209px;
+
+    &__icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        background-color: $flaxFlowerBlue;
+        border: 2px solid $starryNight;
+        border-radius: 50%;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        padding: 0 10px;
+        color: $white;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &:not(:last-of-type)::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 0;
+        transform: translateX(calc(50% + 15px));
+        height: 6px;
+        width: 110px;
+        background:
+            radial-gradient(circle at 3px 3px, #C4C4C4 3px, transparent 3px),
+            radial-gradient(circle at 29px 3px, #C4C4C4 3px, transparent 3px),
+            radial-gradient(circle at 55px 3px, #C4C4C4 3px, transparent 3px),
+            radial-gradient(circle at 81px 3px, #C4C4C4 3px, transparent 3px),
+            radial-gradient(circle at 107px 3px, #C4C4C4 3px, transparent 3px);
+        background-size: 111px 6px;
+        background-repeat: repeat-x;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}

@@ -1,9 +1,18 @@
 //Plugins
 @use 'normalize.css/normalize' as *;
+@use 'custom-select/build/custom-select' as *;
 
 //scss
 @use 'fonts';
 @use 'global';
 
 //Components
+@use 'components/button';
+@use 'components/highlight';
 @use 'components/header';
+@use 'components/nav';
+@use 'components/banner';
+@use 'components/order';
+@use 'components/feature';
+@use 'components/footer';
+@use 'components/form';

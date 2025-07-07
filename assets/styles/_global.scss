@@ -1,3 +1,21 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 body {
+    @include font-smoothing;
     font-family: 'Lato', sans-serif;
+
+    &.menu-open {
+        overflow: hidden;
+    }
+}
+
+p {
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
 }

@@ -1,0 +1,76 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $lavaStone;
+    box-sizing: border-box;
+
+
+    &__container {
+        @include container;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__copyright {
+        color: $white;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1;
+    }
+
+    &__payments {
+        display: flex;
+        gap: 38px;
+        align-items: center;
+    }
+
+    &__payment {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__payment-text {
+        color: $explosiveGrey;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 1px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 38px;
+        align-items: center;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: unset;
+        color: $white;
+        transition: all 0.1s ease-in;
+
+        &:hover {
+            color: $flaxFlowerBlue;
+        }
+    }
+
+    &__social-text {
+        color: inherit;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1;
+        margin-bottom: 1px;
+    }
+}

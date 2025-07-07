@@ -1,15 +1,214 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lorem ipsum dolor</title>
-    <meta name="description" content="Lorem ipsum dolor sit ametconsectetur adipiscing">
-    <link rel="stylesheet" href="./styles/main.scss">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <script type="module" src="js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorem ipsum dolor</title>
+  <meta name="description" content="Lorem ipsum dolor sit ametconsectetur adipiscing">
+  <link rel="stylesheet" href="./assets/styles/main.scss">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <a href="/" class="header__logo">
+        <img width="248" height="35" src="assets/images/LoremIpsum.Net.svg" alt="Логотип" class="header__logo-img">
+      </a>
+      <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Бизнес</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Оформить заказ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section hidden class="banner">
+    <picture>
+      <!-- Мобильные (до 768px) -->
+      <source media="(max-width: 767px)" srcset="
+        /assets/images/banner-mobile-1x.jpg 1x,
+        /assets/images/banner-mobile-2x.jpg 2x
+      " type="image/jpeg">
+      <!-- Планшеты (768-1199px) -->
+      <source media="(max-width: 1199px)" srcset="
+        /assets/images/banner-tablet-1x.jpg 1x,
+        /assets/images/banner-tablet-2x.jpg 2x
+      " type="image/jpeg">
+      <!-- Десктоп (1200px+) -->
+      <img src="/assets/images/banner.webp" srcset="/assets/images/banner.webp2x 2x" alt="Описание баннера"
+        class="banner__background-image" width="1920" height="850" alt="Banner image">
+    </picture>
+    <div class="banner__container">
+      <h1 class="banner__title"><span class="highlight highlight--blue">Lorem ipsum </span> dolor sit
+        ametconsectetur <span class="highlight highlight--blue">adipiscing</span></h1>
+      <div class="banner__text-wrap">
+        <p class="banner__text"><strong>At vero eos et accusamus et iusto odio dignissimos ducimus!</strong></p>
+        <ul class="banner__list">
+          <li class="banner__list-item">Totam rem aperiam eaque ipsa</li>
+          <li class="banner__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+          <li class="banner__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+        </ul>
+      </div>
+      <div class="banner__button-wrap">
+        <button class="banner__button button">Заказать</button>
+        <button class="banner__button button button--white">Подробнее</button>
+      </div>
+    </div>
+  </section>
+
+  <section hidden class="order">
+    <img src="/assets/images/worldMap.webp" class="order__background-image" width="1920" height="1000" alt="World map">
+
+    <div class="order__container">
+      <div class="order__title-wrap">
+        <h2 class="order__title">Оформление <span class="highlight highlight--blue">заказа</span></h2>
+        <p class="order__subtitle">Перед заполнением формы ознакомьтесь c нашей схемой работы!</p>
+      </div>
+
+      <div class="order__features">
+        <div class="feature">
+          <div class="feature__icon-box">
+            <img src="/assets/images/search.svg" alt="Search icon" width="55" height="55" class="feature__icon">
+          </div>
+          <p class="feature__text">Lorem ipsum dolor
+            sit amet</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon-box">
+            <img src="/assets/images/percent.svg" alt="File icon" width="55" height="55" class="feature__icon">
+          </div>
+          <p class="feature__text">Сonsecteturadipiscing elit</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon-box">
+            <img src="/assets/images/file.svg" alt="Percent icon" width="55" height="55" class="feature__icon">
+          </div>
+          <p class="feature__text">Sed do eiusmod tempor</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon-box">
+            <img src="/assets/images/message.svg" alt="Message icon" width="55" height="55" class="feature__icon">
+          </div>
+          <p class="feature__text">Esse cillum dolore
+            eu fugiat</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon-box">
+            <img src="/assets/images/money.svg" alt="Money icon" width="55" height="55" class="feature__icon">
+          </div>
+          <p class="feature__text">Excepteur sint occaecat cupidatat non proident</p>
+        </div>
+      </div>
+
+      <form class="form" action="#" method="POST">
+        <div class="form__grid">
+          <div class="form__field form__field--one-thirds">
+            <div class="form__input-wrap">
+              <label id="selectLabel" for="select"><span hidden>Выберите тип системы</span></label>
+              <select class="form__input" name="select" id="select">
+                <option value="" selected>Выберите тип системы</option>
+                <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                <option value="Et harum quidem">Et harum quidem</option>
+                <option value="Temporibus autem">Temporibus autem</option>
+                <option value="Itaque earum rerum">Itaque earum rerum</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__field form__field--one-third">
+            <div class="form__input-wrap">
+              <label id="email" for="email"><span hidden>Email</span></label>
+              <input class="form__input" type="email" name="email" id="email" placeholder="Ваш e-mail"
+                autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form__field form__field--one-third">
+            <div class="form__input-wrap">
+              <label id="nameLabel" for="name"><span hidden>Ваше имя</span></label>
+              <input class="form__input" type="text" name="name" id="name" placeholder="Ваше имя" autocomplete="name"
+                required>
+            </div>
+          </div>
+          <div class="form__field form__field--two-thirds">
+            <div class="form__range-slider-wrap">
+              <label id="searchLabel" for="rangeSlider">
+                <div class="form__slider-text-wrap">
+                  <p class="form__slider-text">Sed ut perspiciatis, unde omnis iste natus</p>
+                  <p class="form__slider-value" id="rangeSliderValue">75 %</p>
+                </div>
+
+                <input type="range" class="form__range-slider" min="1" max="100" step="1" value="75" name="rangeSlider"
+                  id="rangeSlider">
+              </label>
+            </div>
+          </div>
+          <div class="form__field form__field--one-third">
+            <label class="form__file-input">
+              <input type="file" name="attachment" id="attachment" hidden>
+              <span class="form__file-input-text">
+                <img src="/assets/images/attachment-icon.svg" width="17" height="20" alt="File icon"
+                  class="form__file-input-icon">
+                Прикрепить файл
+              </span>
+              <span class="form__file-name" id="fileName">Файл не выбран</span>
+            </label>
+          </div>
+          <div class="form__field form__field--full">
+            <button class="button form__submit" type="submit">
+              Отправить
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer hidden class="footer">
+    <div class="footer__container">
+      <p class="footer__copyright">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+
+      <div class="footer__payments">
+        <div class="footer__payment">
+          <img src="/assets/images/qiwi.svg" width="20" height="20" alt="Qiwi иконка" class="footer__payment-icon">
+          <span class="footer__payment-text">QIWI wallet</span>
+        </div>
+        <div class="footer__payment">
+          <img src="/assets/images/yandex-money.svg" width="20" height="20" alt="Yandex money иконка"
+            class="footer__payment-icon">
+          <span class="footer__payment-text">Yandex Money</span>
+        </div>
+        <div class="footer__payment">
+          <img src="/assets/images/webmoney.svg" width="20" height="20" alt="Webmoney иконка"
+            class="footer__payment-icon">
+          <span class="footer__payment-text">Web Money</span>
+        </div>
+
+      </div>
+
+      <div class="footer__social">
+        <a href="mailto:info@ipsum228.com" class="footer__social-link">
+          <img src="/assets/images/mail.svg" alt="Email иконка" width="20" height="20" class="social__icon">
+          <span class="footer__social-text">info@ipsum228.com</span>
+        </a>
+        <a href="https://vk.com" class="footer__social-link" target="_blank">
+          <img src="/assets/images/vk.svg" alt="ВКонтакте иконка" width="20" height="20" class="social__icon">
+          <span class="footer__social-text">Мы вконтакте</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
 </html>

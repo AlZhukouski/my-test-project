@@ -1,0 +1,68 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.button {
+    text-decoration: unset;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $white;
+    padding: 14px 31px;
+    border-radius: 4px;
+    background-color: $flaxFlowerBlue;
+    border: 1px solid $white;
+    transition: ease-in-out 0.1s;
+    min-width: 183px;
+    box-sizing: border-box;
+    min-height: 43px;
+
+
+    &:hover,
+    &:active {
+        background-color: #358AC7;
+    }
+
+    &:focus {
+        border-color: #2A7BB9;
+    }
+
+    &:disabled {
+        background-color: #F3F4F6 !important;
+        color: #9CA3AF !important;
+        border-color: #E5E7EB !important;
+        cursor: not-allowed !important;
+        outline: unset !important;
+        box-shadow: unset;
+    }
+
+
+    &--white {
+        color: $caviar;
+        border: 1px solid $caviar;
+        background-color: $white;
+
+        &:hover {
+            background-color: #358AC7;
+            color: $white;
+            border-color: #358AC7;
+        }
+
+        &:active {
+            outline: none;
+            border-color: #2A7BB9;
+        }
+
+        &:focus {
+            border-color: $caviar;
+            color: $white;
+            background-color: #358AC7;
+        }
+    }
+
+    &--full-width {
+        width: 100%;
+        max-width: unset;
+    }
+}

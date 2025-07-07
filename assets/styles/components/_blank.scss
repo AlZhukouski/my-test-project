@@ -1,0 +1,8 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.block {
+    &__container {
+        @include container;
+    }
+}

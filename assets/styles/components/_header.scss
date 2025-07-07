@@ -1,20 +1,68 @@
-@use "../variables";
+@use "../variables" as *;
 @use "../mixins" as *;
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0;
     background-color: rgba(16, 16, 29, 0.9);
+    z-index: 111;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    min-height: 100px;
 
     &__container {
         @include container;
-
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    &__burger {
+        display: none;
+
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 112;
+        }
+    }
+
+    &__burger-line {
+        display: block;
+        width: 24px;
+        height: 3px;
+        border: 1px solid white;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    &__burger[aria-expanded="true"] {
+        .header__burger-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .header__burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .header__burger-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
     }
 }
