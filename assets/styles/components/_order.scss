@@ -84,6 +84,11 @@
             flex-wrap: wrap;
             gap: 35px;
             justify-content: center;
+            margin-bottom: 75px;
+        }
+
+        @media (max-width: $sm) {
+            margin-bottom: 60px; 
         }
     }
 }

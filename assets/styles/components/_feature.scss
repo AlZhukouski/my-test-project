@@ -20,6 +20,18 @@
         background-color: $flaxFlowerBlue;
         border: 5px solid $starryNight;
         border-radius: 50%;
+
+        @media (max-width: $sm) {
+            width: 75px;
+            height: 75px;  
+        }
+    }
+
+    &__icon {
+        @media (max-width: $sm) {
+            width: 40px;
+            height: auto;  
+        }
     }
 
     &__text {
@@ -51,8 +63,8 @@
         @media (max-width: $lg) {
             width: 80px;
             background: radial-gradient(circle at 3px 3px, #C4C4C4 3px, transparent 3px),
-             radial-gradient(circle at 29px 3px, #C4C4C4 3px, transparent 3px),
-              radial-gradient(circle at 55px 3px, #C4C4C4 3px, transparent 3px);
+                radial-gradient(circle at 29px 3px, #C4C4C4 3px, transparent 3px),
+                radial-gradient(circle at 55px 3px, #C4C4C4 3px, transparent 3px);
         }
 
         @media (max-width: 970px) {
