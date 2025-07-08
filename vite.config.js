@@ -3,9 +3,10 @@ import { resolve } from 'path';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
+  base: '/my-test-project',
   plugins: [
     createHtmlPlugin({
-      minify: true, // Включить минификацию HTML
+      minify: true,
     }),
   ],
   resolve: {
