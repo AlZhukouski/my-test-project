@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-<!-- ифывфывфвывыф -->
+
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
@@ -41,7 +41,7 @@
         /assets/images/banner-lg.webp 1x,
         /assets/images/banner-lg-2x.webp 2x" type="image/webp">
       <img src="/assets/images/banner.webp" srcset="/assets/images/banner.webp 1x, /assets/images/banner2x.webp 2x"
-        alt="Описание баннера" class="banner__background-image" width="1920" height="850" alt="Banner image">
+        class="banner__background-image" width="1920" height="850" alt="Banner image">
     </picture>
     <div class="banner__overlay"></div>
     <div class="banner__container">
@@ -122,7 +122,7 @@
           </div>
           <div class="form__field form__field--one-third">
             <div class="form__input-wrap">
-              <label id="email" for="email"><span hidden>Email</span></label>
+              <label id="emailLabel" for="email"><span hidden>Email</span></label>
               <input class="form__input" type="email" name="email" id="email" placeholder="Ваш e-mail"
                 autocomplete="email" required>
             </div>
@@ -136,15 +136,17 @@
           </div>
           <div class="form__field form__field--two-thirds">
             <div class="form__range-slider-wrap">
-              <label id="searchLabel" for="rangeSlider">
-                <div class="form__slider-text-wrap">
-                  <p class="form__slider-text">Sed ut perspiciatis, unde omnis iste natus</p>
-                  <p class="form__slider-value" id="rangeSliderValue">75 %</p>
-                </div>
 
-                <input type="range" class="form__range-slider" min="1" max="100" step="1" value="75" name="rangeSlider"
-                  id="rangeSlider">
-              </label>
+              <div class="form__slider-text-wrap">
+                <label id="searchLabel" for="rangeSlider">
+                  <span class="form__slider-text">Sed ut perspiciatis, unde omnis iste natus</span>
+                </label>
+                <span class="form__slider-value" id="rangeSliderValue">75 %</span>
+              </div>
+
+              <input type="range" class="form__range-slider" min="1" max="100" step="1" value="75" name="rangeSlider"
+                id="rangeSlider">
+
             </div>
           </div>
           <div class="form__field form__field--one-third">
