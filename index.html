@@ -124,7 +124,7 @@
             <div class="form__input-wrap">
               <label id="emailLabel" for="email"><span hidden>Email</span></label>
               <input class="form__input" type="email" name="email" id="email" placeholder="Ваш e-mail"
-                autocomplete="email" required>
+                autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Введите корректный email" required>
             </div>
           </div>
           <div class="form__field form__field--one-third">
@@ -138,20 +138,20 @@
             <div class="form__range-slider-wrap">
 
               <div class="form__slider-text-wrap">
-                <label id="searchLabel" for="rangeSlider">
+                <label id="rangeSliderLabel" for="rangeSlider">
                   <span class="form__slider-text">Sed ut perspiciatis, unde omnis iste natus</span>
                 </label>
                 <span class="form__slider-value" id="rangeSliderValue">75&nbsp;%</span>
               </div>
 
               <input type="range" class="form__range-slider" min="1" max="100" step="1" value="75" name="rangeSlider"
-                id="rangeSlider">
+                id="rangeSlider" aria-labelledby="rangeSliderLabel rangeSliderValue">
 
             </div>
           </div>
           <div class="form__field form__field--one-third">
             <label class="form__file-input">
-              <input type="file" name="attachment" id="attachment" hidden>
+              <input type="file" name="attachment" id="attachment" accept=".pdf,.doc,.docx" hidden>
               <span class="form__file-input-text">
                 <img src="/assets/images/attachment-icon.svg" width="17" height="20" alt="File icon"
                   class="form__file-input-icon">
